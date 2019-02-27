@@ -1,4 +1,18 @@
-<div class="info-group-title">
+<div class="info-group-title"
+     [popover]="popInfoTemplate"
+     placement="bottom"
+     #popInfo="bs-popover"
+     triggers="">
   {{ groupTitle }}
+  <button type="button"
+          class="popover-icon"
+          (click)="popInfo.toggle()">
+    <i class="fa fa-info-circle"></i>
+  </button>
 </div>
 <ng-content></ng-content>
+<ng-template #popInfoTemplate>
+  <ul>
+    <li *ngFor="let info of groupDetailInfo[groupTitle]">{{ info }}</li>
+  </ul>
+</ng-template>

@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { ChartsModule } from 'ng2-charts';
 import { PopoverModule } from 'ngx-bootstrap/popover';
 import { TabsModule } from 'ngx-bootstrap/tabs';
+import { TooltipModule  } from 'ngx-bootstrap/tooltip';
 
 import { SharedModule } from '../../shared/shared.module';
 import { CephSharedModule } from '../shared/ceph-shared.module';
@@ -26,7 +27,8 @@ import { OsdSummaryPipe } from './osd-summary.pipe';
     SharedModule,
     ChartsModule,
     RouterModule,
-    PopoverModule.forRoot()
+    PopoverModule.forRoot(),
+    TooltipModule.forRoot()
   ],
 
   declarations: [

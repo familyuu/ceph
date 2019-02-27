@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 
+import { Description } from './info-card-description.enum';
 @Component({
   selector: 'cd-info-card',
   templateUrl: './info-card.component.html',
@@ -14,4 +15,8 @@ export class InfoCardComponent {
   cardClass = '';
   @Input()
   contentClass: string;
+  @Input()
+  descriptionIndex: string;
+
+  description = Description;
 }

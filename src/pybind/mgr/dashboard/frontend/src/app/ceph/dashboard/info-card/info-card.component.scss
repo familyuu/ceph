@@ -133,3 +133,8 @@ $logs-text-font-size: $card-font-min-size;
     min-height: $card-height * 4;
   }
 }
+
+::ng-deep cd-info-card .bs-tooltip-top {
+  left: 10px !important;
+}
+

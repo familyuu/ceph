@@ -2,9 +2,12 @@
      [ngClass]="cardClass">
   <div class="card-title">
     <a *ngIf="link; else noLinkTitle"
-       [routerLink]="link">{{ cardTitle }}</a>
+       [routerLink]="link"
+       [tooltip]="tipTemplate"
+       placement="top">{{ cardTitle }}</a>
     <ng-template #noLinkTitle>
-      {{ cardTitle }}
+      <span [tooltip]="tipTemplate"
+            placement="top">{{ cardTitle }}</span>
     </ng-template>
   </div>
   <div class="card-body"
@@ -12,3 +15,7 @@
     <ng-content></ng-content>
   </div>
 </div>
+
+<ng-template #tipTemplate>
+  <span>{{ description[cardTitle] }}</span>
+</ng-template>

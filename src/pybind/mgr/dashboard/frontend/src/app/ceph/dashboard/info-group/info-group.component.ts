@@ -8,4 +8,10 @@ import { Component, Input } from '@angular/core';
 export class InfoGroupComponent {
   @Input()
   groupTitle: string;
+
+  groupDetailInfo = {
+    Status: ['XX', 'SS', 'DD'],
+    Performance: ['XX', 'SS', 'DD'],
+    Capacity: ['XX', 'SS', 'DD']
+  };
 }

@@ -5,3 +5,23 @@
   padding: 0;
   font-size: 21px;
 }
+
+.popover-icon {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0;
+  margin-left: 5px;
+  outline-style: none;
+  border: none;
+  font-size: 0.8em;
+  .fa {
+    color: #31708f;
+  }
+}
+
+::ng-deep cd-info-group .bs-popover-bottom {
+  left: 40px !important;
+  margin-top: 5px !important;
+  .arrow {
+    transform: translateX(-9rem) !important;
+  }
+}
